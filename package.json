@@ -1,0 +1,48 @@
+{
+  "name": "dsh-boot-screen",
+  "version": "1.3.1",
+  "private": true,
+  "description": "Cinematic boot screen for the DeepSeek Harness Web GUI: a start gate, a particle reveal, and the deep-sea whale maid as the finale.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/boot.js",
+    "lib/boot.css",
+    "lib/assets/portrait.b64",
+    "scripts/install.mjs",
+    "scripts/uninstall.mjs",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "boot-screen"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "scripts": {
+    "build:client": "node tools/build-client.mjs",
+    "install": "node scripts/install.mjs",
+    "uninstall": "node scripts/uninstall.mjs"
+  }
+}
